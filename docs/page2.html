@@ -5,12 +5,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="functions" href="script.js">
 </head>
 <body>
     <title>Cool duck!!!!</title>
     <center><font class="cool">epic shuba duck dance to funny music</font></center>
-    <center><img src="shuba_duck.gif" alt="duck"></center>
+    <center><img src="shuba_duck.gif" alt="duck" id="shuba" onmouseover="rotation()"></center>
     <center><font class="cool">you found the secret shuba duck!</font></center>
     <center><audio controls src="shuba_song.mp3" loop></audio></center>
+    <center><font class="cool">you can also spin the duck just give it a go and point at the duck</font></center>
+    <center><button onclick="unrotation()">revert the duck</button></center>
+    <br> <br> <br>
     <center><a href="index.html">go back</a></center>
+    <script>
+        function rotation(){
+            document.querySelector("#shuba").style.transform = "rotate(180deg)";
+        }
+        function unrotation(){
+            document.querySelector("#shuba").style.transform = "rotate(0deg)";
+        }
+
+    </script>
 </body>
